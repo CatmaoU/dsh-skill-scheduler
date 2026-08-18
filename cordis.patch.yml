@@ -1,0 +1,9 @@
+# dsh-skill-scheduler bundle layer: on-demand skill catalog scheduler.
+# It registers a skill provider (dsh-skill-scheduler) that exposes only the
+# design skills whose trigger words match the current session's latest user
+# message. dsh-design-skills' original provider is disabled in the profile
+# cordis.patch.yml so the catalog stays empty unless a trigger matches.
+- insert:
+    - id: dsh-skill-scheduler
+      name: '@dsh-external/dsh-skill-scheduler'
+      config: {}
